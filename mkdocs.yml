@@ -1,0 +1,24 @@
+site_name: Aplicaciones Web
+site_description: Logra los resultados de aprendizaje del módulo, trabajando por proyectos.
+site_author: Jose Robledano Garcia
+site_dir: resultado
+site_url: https://sever8a.github.io/awe/
+docs_dir: appweb
+
+nav: 
+    - "Qué son y que no son": "index.md"
+    
+
+theme:
+    name: 'material'
+    features:
+        - navigation.expand
+
+
+markdown_extensions:
+    - admonition
+    - pymdownx.superfences
+    - pymdownx.details
+    - def_list
+    - pymdownx.tasklist:
+        custom_checkbox: true
