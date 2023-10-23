@@ -8,17 +8,18 @@ docs_dir: appweb
 nav: 
     - "Qué son y que no son": "index.md"
     
-
 theme:
     name: 'material'
     features:
         - navigation.expand
 
-
 markdown_extensions:
     - admonition
     - pymdownx.superfences
     - pymdownx.details
+    - pymdownx.tabbed:
+        alternate_style: true
     - def_list
+    - footnotes
     - pymdownx.tasklist:
         custom_checkbox: true
