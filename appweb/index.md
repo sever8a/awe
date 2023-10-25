@@ -63,7 +63,7 @@ Por otro lado, se puede configurar el acceso remoto al servidor local mediante u
 
 ### Cloud
 
-Son servicios en la nube, de esta forma odemos configurar nuestros propios servicios y espacio, pagando por uso. 
+Son servicios en la nube, de esta forma odemos configurar nuestros propios servicios y espacio, pagando por uso. En muchos casos facilitan el despliegue de la apliación web.
 
 
 
