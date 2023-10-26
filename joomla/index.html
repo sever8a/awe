@@ -19,7 +19,7 @@
     
     
       
-        <title>CMS de propósito general - Aplicaciones Web</title>
+        <title>Propósito general - Aplicaciones Web</title>
       
     
     
@@ -99,7 +99,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              CMS de propósito general
+              Propósito general
             
           </span>
         </div>
@@ -201,7 +201,7 @@
   
     <li class="md-nav__item">
       <a href="../mediawiki/" class="md-nav__link">
-        CMS para compartir contenidos.
+        Para compartir contenidos.
       </a>
     </li>
   
@@ -239,9 +239,74 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Propósito general
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
-        CMS de propósito general
+        Propósito general
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#historia" class="md-nav__link">
+    Historia
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#instalacion" class="md-nav__link">
+    Instalación
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creacion-de-contenido" class="md-nav__link">
+    Creación de contenido
+  </a>
+  
+    <nav class="md-nav" aria-label="Creación de contenido">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#articulos" class="md-nav__link">
+    Artículos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#categorias" class="md-nav__link">
+    Categorías
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -267,6 +332,55 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#historia" class="md-nav__link">
+    Historia
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#instalacion" class="md-nav__link">
+    Instalación
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creacion-de-contenido" class="md-nav__link">
+    Creación de contenido
+  </a>
+  
+    <nav class="md-nav" aria-label="Creación de contenido">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#articulos" class="md-nav__link">
+    Artículos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#categorias" class="md-nav__link">
+    Categorías
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -281,7 +395,30 @@
 
 
 <h1 id="joomla">Joomla</h1>
-<p>Un viejo conocido que regresa con muchas opciones.</p>
+<p><em>Un viejo conocido que regresa con muchas opciones.</em></p>
+<h2 id="historia">Historia</h2>
+<p>Joomla es un CMS libre, que llegó a ser lider en implantación de sitios web. Se convirtió en el referente para otros desarrollos posteriores que, de alguna manera lograron superarle.</p>
+<p>Surge como una aplicación web de propósito general, de manera que se puede utilizar para generar todo tipo de páginas web.</p>
+<p>Sin embargo, tantas opciones hicieron que la complejidad de su uso aumentara. Y finalmente otros CMS, más sencilos de configurar, fueron ocupando su lugar.</p>
+<p>Actualmente está en un proceso de regeneración.</p>
+<div class="admonition info">
+<p class="admonition-title">Su desarrollo actual</p>
+<p>Las últimas versiones son la <strong>4.4</strong> y <strong>5.0</strong></p>
+</div>
+<h2 id="instalacion">Instalación</h2>
+<p>Como otros CMS, necesita una base de datos para almacenzar los distintos objetos con los que generar la web. Pero en este caso no sirve cualquier base de datos. Es necesario que sea <strong>PostgreSQL</strong> o <strong>MySQL</strong>.</p>
+<p>También es necesario un <strong>servidor http</strong> que interprete <strong>lenguaje PHP</strong>.</p>
+<p>También es posible utilziar un contenedor <em>Docker</em> para lanzar la aplicación, aunque es necesario comprender que con esta configuración es necesario el uso de dos contenedos:
+- Uno para Joomla.
+- Otro para la base de datos.</p>
+<h2 id="creacion-de-contenido">Creación de contenido</h2>
+<p>Requiere de unos pasos previos que no se pueden evitar. La primera cuestión que hay que resolver, es la temática del sitio y qué propósito o características queremos dotar al sitio.</p>
+<h3 id="articulos">Artículos</h3>
+<p>Joomla organiza el <strong>contenido básico</strong>, los artículos, en categorias y subcategorias. Esta estructura tiene que estar creada previamente. Observa que la categoria no tiene porqué hacer referencia a la temática de cada artículo, sino más bien a la función de este en el diseño del sitio web.</p>
+<p>Los artículos tienen que estar asignados a una categoría.</p>
+<h3 id="categorias">Categorías</h3>
+<p>Son la ubicación de los artículos. Pueden seguir cualquier criterio, y es recomendable la estructura en subcategorías para facilitar la comprensión y ubicación. </p>
+<p>Existe la categoria <em>"sin categoria"</em> que también se puede utilizar, aunque no es lo más recomendable en un sitio profesional.</p>
 
 
 
