@@ -30,6 +30,10 @@ Se trata de un conjunto de etiquetas, que se colocan formando bloques. Cada etiq
 
 # Etiquetas básicas
 
+Un documento html debe comenzar siempre con las etiquetas `<!DOCTYPE html>`
+
+De esta manera, en los primeros byte, se indica al navegador el tipo de documento que tiene que mostrar.
+
 ## html
 
 Define una página web. Siempre debe aparecer, para comenzar la página y finalizarla. Contiene todo el resto de etiquetas y texto de la página web. 
@@ -79,3 +83,29 @@ Por ejemplo, indicar texto en negrita dentro de un párrafo.
     Por ejemplo, `menu` para definir una zona de menú, o `article` para indicar espacio para contenido textual.
 
     De esta forma se simplica su uso, sin necesidad de utilizar modificadores **CSS** para conseguir bloques específicos.
+
+## Encabezados
+
+Establece el nivel de encabezado de un título concreto. Se utiliza numeración baja para indicar los títulos de mayor tamaño.
+
+``` html
+    <h1>tamaño grande</h1>
+    <h2>título de segundo nivel</h2>
+    <h3>Título de tercer nivel</h3>
+```
+
+## a
+
+Enlace a otras páginas web o referencias, se utiliza la **url** para indicar el destino.
+
+``` html
+    <a href="https://www.otrolugarweb.com">Visita otro lugar de Internet</a>
+
+    <a href="pagina2.html">Visita mi página 2<a>
+```
+
+!!! info "Atributos"
+
+    El atributo **target** sirve para indicar dónde se visualizará el enlace: 
+    
+    **_blank** en la misma ventana del navegador, o en otra nueva.
