@@ -1,6 +1,10 @@
 # Joomla
 
 *Un viejo conocido que regresa con muchas opciones.*
+CMS de propósito general que permite multiples configuraciones 
+
+!!! info "Atención con la complejidad"
+    *Cuidado con extraviarse con sus módulos*. La complejidad del diseño puede generar un autentico kaos. 
 
 ## Historia
 

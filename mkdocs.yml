@@ -7,10 +7,12 @@ docs_dir: appweb
 
 
 nav: 
-    - "Qué son y que no son": "index.md"
-    - "Para compartir contenidos.": "mediawiki.md"
-    - "Blogs y entradas": "wordpress.md"
-    - "Propósito general": "joomla.md"
+    - "Las aplicaciones web": "index.md"
+    - "MediaWiki": "mediawiki.md"
+    - "WordPress": "wordpress.md"
+    - "Joomla": "joomla.md"
+    - "HTML": "html.md"
+    - "CSS": "css.md"
     
 theme:
     name: 'material'
