@@ -10,7 +10,9 @@ nav:
     - "Las aplicaciones web": "index.md"
     - "MediaWiki": "mediawiki.md"
     - "WordPress": "wordpress.md"
-    - "Joomla": "joomla.md"
+    - "Joomla": 
+        - "joomla.md"
+        - "Montar un sitio": "joomla_sitio.md"
     - "HTML": "html.md"
     - "CSS": "css.md"
     
