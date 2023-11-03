@@ -12,14 +12,14 @@
         <meta name="author" content="Jose Robledano Garcia">
       
       
-        <link rel="canonical" href="https://sever8a.github.io/awe/wordpress/">
+        <link rel="canonical" href="https://sever8a.github.io/awe/joomla_sitio/">
       
       <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.0b4">
     
     
       
-        <title>WordPress - Aplicaciones Web</title>
+        <title>Montar un sitio - Aplicaciones Web</title>
       
     
     
@@ -66,7 +66,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#wordpress" class="md-skip">
+        <a href="#pasos-para-montar-un-sitio-joomla" class="md-skip">
           Skip to content
         </a>
       
@@ -99,7 +99,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              WordPress
+              Montar un sitio
             
           </span>
         </div>
@@ -213,21 +213,11 @@
 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../wordpress/" class="md-nav__link">
         WordPress
       </a>
-      
     </li>
   
 
@@ -238,12 +228,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
       
       
       
@@ -278,11 +270,66 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../joomla_sitio/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Montar un sitio
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Montar un sitio
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#cambio-de-idioma" class="md-nav__link">
+    Cambio de idioma
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#la-plantilla" class="md-nav__link">
+    La plantilla
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#los-menus" class="md-nav__link">
+    Los menús
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -344,6 +391,35 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#cambio-de-idioma" class="md-nav__link">
+    Cambio de idioma
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#la-plantilla" class="md-nav__link">
+    La plantilla
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#los-menus" class="md-nav__link">
+    Los menús
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -357,8 +433,59 @@
                   
 
 
-<h1 id="wordpress">WordPress</h1>
-<p>Un gestor de contenido que ofrece mucho por poco.</p>
+<h1 id="pasos-para-montar-un-sitio-joomla">Pasos para montar un sitio Joomla</h1>
+<p>Pasos básicos para comenzar a crear un nuevo sitio utilizando Joomla.</p>
+<div class="admonition info">
+<p class="admonition-title">Acceso</p>
+<p>Recuerda que para acceder como administrador, debes acceder con la ruta <em>administrator</em>.</p>
+<p><strong>ruta_a_mi_joomla/administrator</strong></p>
+</div>
+<h2 id="cambio-de-idioma">Cambio de idioma</h2>
+<p>Desde la pantalla de Administrador, se accede al menú lateral <strong>System</strong>. 
+En el apartado <strong>Manage</strong>, se puede seleccionar la opción <strong>Languages</strong>.</p>
+<p>Se muestran la lista de los idiomas disponibles (instalados), tanto para el sitio web como para las páginas de administrador.</p>
+<div class="admonition qestion">
+<p class="admonition-title">Atención a los detalles</p>
+<p>En la parte superior izquierda aparece un desplegable donde se puede seleccionar las opciones de idioma para el <strong>Sitio</strong> o para el <strong>Administrador</strong>.</p>
+</div>
+<p>Si el idioma que interesa no está en la lista <em>(por defecto aparece inglés GB)</em> habrá que instalar el nuevo idioma <strong>Install languages</strong>, que está en la parte superior izquierda.</p>
+<p>Esta opción nos muestra el listado de idiomas disponibles. También es posible realizar búsquedas.</p>
+<div class="admonition info">
+<p class="admonition-title">La versión adecuada</p>
+<p>Es importante que el paquete de idioma esté disponible para la versión de Joomla que se está utilizando. Si no, es posible que se generen algunos errores o aparezcan textos en diferente idioma.</p>
+</div>
+<p>Basta con pulsar el botón de instalación del idioma, y esperar que se complete.</p>
+<p>Volviendo a la plantalla con la lista de idiomas instalados, se puede seleccionar el idioma deseado y establecerlo por defecto. Recuerda que se puede cambiar el idioma del sitio y del administrador de manera independiente.</p>
+<div class="admonition info">
+<p class="admonition-title">El ejemplo</p>
+<p>Para este ejemplo, se ha instalado los idiomas <em>español</em> y <em>frances</em>.
+Se ha establecido <em>español</em> como idioma por defecto para el administrador.</p>
+</div>
+<h2 id="la-plantilla">La plantilla</h2>
+<p>Desde la opción <strong>Sistema</strong>, en el apartado <strong>Plantillas</strong>, se puede realizar la gestión de el estilo general; tanto del sitio web como de las pantallas del administrador.</p>
+<p>Por defecto Joomla 4 tiene la plantilla del sitio: <strong>Cassiopeia</strong>. Y la plantilla de administrador <strong>Atum</strong>. Se puede comprobar al visualizar la lista de plantillas en ambos casos.</p>
+<div class="admonition question">
+<p class="admonition-title">Opciones disponibles</p>
+<p>Es importante observar que se hace referencia a las <strong>plantillas</strong> y a los <strong>estilos</strong>. Siendo posible acceder a los listados correspondientes de cada uno de ellos, disponibles tanto para el <em>sitio</em> como para el <em>administrador</em>.</p>
+</div>
+<p>Con la opción <strong>Sistema</strong> y <strong>Estilos de plantillas del sitio</strong>, se accede a la lista de estilos disponibles. Por defecto solo estará el estilo Cassiopia.</p>
+<p>Pulsando sobre el nombre del estilo de la plantilla se accede a la pantalla de configuración. Dependiendo de cada caso, hay algunas opciones que se pueden configurar desde esta pantalla. </p>
+<p>En Cassiopeia se puede cambiar el logo que aparece en la parte superior y el color.</p>
+<h2 id="los-menus">Los menús</h2>
+<p>Sirven para acceder al contenido del sitio web. </p>
+<p>Desde el panel de control del administrador, el a parte izquierda se puede acceder a los menús.</p>
+<div class="admonition info">
+<p class="admonition-title">Menús y sus opciones</p>
+<p>Es importante conocer que los Menús del sitio hacen referencia a agrupaciones de <strong>opciones</strong> que llevan o muestran diferente contendio del sitio web.</p>
+<p>Las <strong>opciones</strong> de cada menú, también se llamán menú. y actúan como enlace para cargar un contenido concreto.</p>
+</div>
+<p>Al acceder al <strong>"Main Menu"</strong> se observa la lista de opciones que tiene ese menú. En la parte superior izquierda, con el botón <em>Nuevo</em>, se puede crear una nueva opción dentro del menú. </p>
+<p>Cuando creas una nueva opción, el dato obligatorio es el nombre de la opción. Si no se cambia nada más, este será como aparece en el menú.</p>
+<p>También es obligatorio especificar el <strong>elemento del menú</strong>, es decir qué se mostrará cuando se pulse esta opción del menú. </p>
+<div class="admonition question">
+<p class="admonition-title">Variacíon de opciones</p>
+<p>Según el tipo de elemento seleccionado, cambia las opciones disponibles en el resto de pestañas. </p>
+</div>
 
 
 
