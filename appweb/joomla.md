@@ -12,7 +12,7 @@ Joomla es un CMS libre, que llegó a ser lider en implantación de sitios web. S
 
 Surge como una aplicación web de propósito general, de manera que se puede utilizar para generar todo tipo de páginas web.
 
-Sin embargo, tantas opciones hicieron que la complejidad de su uso aumentara. Y finalmente otros CMS, más sencilos de configurar, fueron ocupando su lugar.
+Sin embargo, la cantidad de opciones y la organización, provocó un aumento de la complejidad de su uso. Finalmente otros CMS, más sencilos de configurar, fueron ocupando su lugar.
 
 Actualmente está en un proceso de regeneración.
 
@@ -23,26 +23,42 @@ Actualmente está en un proceso de regeneración.
 
 Como otros CMS, necesita una base de datos para almacenzar los distintos objetos con los que generar la web. Pero en este caso no sirve cualquier base de datos. Es necesario que sea **PostgreSQL** o **MySQL**.
 
-También es necesario un **servidor http** que interprete **lenguaje PHP**.
+Es necesario un **servidor http** que interprete **lenguaje PHP**.
 
-También es posible utilziar un contenedor *Docker* para lanzar la aplicación, aunque es necesario comprender que con esta configuración es necesario el uso de dos contenedos:
+Otra posibilidad es utilizar un contenedor *Docker* para lanzar la aplicación, aunque será necesario comprender que con esta configuración es necesario el uso de dos contenedos:
 - Uno para Joomla.
 - Otro para la base de datos.
 
 ## Creación de contenido
 
-Requiere de unos pasos previos que no se pueden evitar. La primera cuestión que hay que resolver, es la temática del sitio y qué propósito o características queremos dotar al sitio.
+Es necesario tener una visión previa de cómo queremos que sea el sitio web que diseñamos. 
+
+De esta manera, una opción es elegir e instalar una plantilla que se ajuste a lo que necesitamos.
+
+Cada plantilla contiene elementos diferentes, ya prediseñados, lo que facilita mucho cualquier desarrollo.
+
+!!! question "Personalización"
+
+    También es posible realizar el diseño de estilo propipo, directamente utilizando **HTML** y **CSS**.
+
 
 ### Artículos
 
-Joomla organiza el **contenido básico**, los artículos, en categorias y subcategorias. Esta estructura tiene que estar creada previamente. Observa que la categoria no tiene porqué hacer referencia a la temática de cada artículo, sino más bien a la función de este en el diseño del sitio web.
+Son el **contenido básico**. Los artículos, pueden contener otros módulos con diferentes funcionalidades según la necesidad.
 
-Los artículos tienen que estar asignados a una categoría.
+Se organizan en categorias y subcategorias. Esta estructura tiene que estar creada previamente.
 
-### Categorías
+!!! info "Categorías"
+    
+     Observa que la categoria no tiene porqué hacer referencia a la temática de cada artículo, sino más bien a la función de este en el diseño del sitio web.
 
-Son la ubicación de los artículos. Pueden seguir cualquier criterio, y es recomendable la estructura en subcategorías para facilitar la comprensión y ubicación. 
 
-Existe la categoria *"sin categoria"* que también se puede utilizar, aunque no es lo más recomendable en un sitio profesional.
+### Menús
+
+Los menús permiten acceder a diferentes artículos o componentes. 
+
+Se deben ubicar en algún **módulo** de los que ofrece la plantilla de estilos utilizada. Mediante la opción **Posición**.
+
+
 
 
