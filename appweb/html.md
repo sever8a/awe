@@ -28,13 +28,29 @@ Se trata de un conjunto de etiquetas, que se colocan formando bloques. Cada etiq
 
 ```
 
-# Etiquetas básicas
+# Etiquetas básicas. La estructura
 
 Un documento html debe comenzar siempre con las etiquetas `<!DOCTYPE html>`
 
-De esta manera, en los primeros byte, se indica al navegador el tipo de documento que tiene que mostrar.
+De esta manera, en los primeros byte, se indica al navegador (browser) el tipo de documento que tiene que mostrar.
 
-## html
+Las **etiquetas** se utilizan para marcar e inicio y fin de su efecto.
+
+``` html
+<div>
+    texto o elementos entre las marcas
+</div>
+```
+A su vez las etiquetas pueden tener atributos, que sirven para matizar su efecto sobre el contenido.
+
+``` html
+    <div class="titular">
+        texto o elementos entre las marcas
+    </div>
+```
+
+
+## La etiqueta html
 
 Define una página web. Siempre debe aparecer, para comenzar la página y finalizarla. Contiene todo el resto de etiquetas y texto de la página web. 
 
@@ -44,17 +60,54 @@ Define una página web. Siempre debe aparecer, para comenzar la página y finali
 </html>
 ```
 
-## head
+Esta etiqueta contiene a otras dos.
 
-Zona de encabezado de la página. Son datos que no se muestran en la página web *excepto el título de la etiqueta*. Se utiliza para colocar las referencias a otros contenidos de la página web (scripts, fuentes externas, hojas de estilo...)
+### head
 
-## body
+Zona de encabezado de la página. 
 
-Elemento visual de la página web. Delimita del contenido *(texto, enlaces, imágenes...)* que forman la página web.
+No es visible directamente en el navegador. 
 
-## p
+Algunos elementos se muestran: como el *título de la página*. 
 
-Delimitador de párrafo. El contenido queda marcado como un párrafo estableciendo un salto de línea al finalizar.
+En esta zona se colocan las referencias a otros contenidos de la página web (scripts, fuentes externas, hojas de estilo...). Estos contenidos pueden estar:
+
+* **Directamente escritos** en la zona de encabezado de la página.
+* **Referenciados** a otro documento que se carga cuando se visualiza la página.
+
+La primera opción, resulta más clara y fácil de seguir, cuando se quiere conocer qué elementos incorpora la página y cuándo son utilizados.
+
+!!! info "Encabezado **explícito**"
+
+    *   La página ocupa más tamaño.
+    * El contenido hay que actualizarlo en todas las páginas.
+
+
+### body
+
+Elemento visual de la página web. 
+
+Todas las demás etiquetas visuales, se colocan dentro de esta.
+
+Delimita del contenido *(texto, enlaces, imágenes...)* que forman la página web.
+
+## Estructuras de bloque
+
+Delimitan bloques de texto, u otros elementos.
+
+La etiqueta más reconocible es el delimitador de párrafos **p**
+
+### p
+
+``` html
+<p>
+    Este texto, forma un párrafo. Todo el texto aparece seguido sin saltos de línea.
+
+    Aunque al escribirlo añada separaciones.
+</p>
+```
+
+El contenido queda marcado como un párrafo estableciendo un salto de línea al finalizar.
 
 !!! info "saltos de línea"
 
@@ -63,14 +116,29 @@ Delimitador de párrafo. El contenido queda marcado como un párrafo establecien
     [^1]: Las etiquetas de bloque tienen una etiqueta de inicio de bloque y otra de final de bloque.
     [^2]: Las etiquetas únicas, solo son una etiqueta de inicio, no tienen etiqueta de finalización. Aunque pueden contener atributos.
 
-## div
+### div
 
-Marca un bloque. Su efecto es similar a la anterior etiqueta. Se suele utilizar para definir bloquees en el maquetado de la página web. 
+Marca un bloque genérica. También tiene el efecto de salto de línea, pero puede contener todo tipo de etiquetas, *incluida su mismo tipo*.
+
+Su efecto es similar a la etiqueta de párrafo, pero en este caso se suele utilizar para definir bloquees en el maquetado de la página web. 
 
 Por ejemplo, el bloque central y otro bloque en el lateral izquierdo.
 
+``` html
+<div class="pagina">
+    <div class="encabezado">
+        Menú de opciones
+    </div>
+    <div class="centro">
+        <p>Documento de prueba.</p>
+    </div>
+    <div class="pie">
+        Datos de contacto
+    </div>
+</div>
+```
 
-## span
+### span
 
 Marca un bloque, integrado en otro de texto. Se utilia para distinguir elementos diferentes dentro de un bloque mayor.
 
@@ -84,7 +152,9 @@ Por ejemplo, indicar texto en negrita dentro de un párrafo.
 
     De esta forma se simplica su uso, sin necesidad de utilizar modificadores **CSS** para conseguir bloques específicos.
 
-## Encabezados
+
+
+## Encabezados jerárquicos
 
 Establece el nivel de encabezado de un título concreto. Se utiliza numeración baja para indicar los títulos de mayor tamaño.
 
@@ -94,7 +164,9 @@ Establece el nivel de encabezado de un título concreto. Se utiliza numeración 
     <h3>Título de tercer nivel</h3>
 ```
 
-## a
+## Enlaces
+
+### La etiqueta a
 
 Enlace a otras páginas web o referencias, se utiliza la **url** para indicar el destino.
 
@@ -109,3 +181,10 @@ Enlace a otras páginas web o referencias, se utiliza la **url** para indicar el
     El atributo **target** sirve para indicar dónde se visualizará el enlace: 
     
     **_blank** en la misma ventana del navegador, o en otra nueva.
+
+
+## Imágenes
+
+### La etiqueta img
+
+**img** es una etiqueta única, no tiene que ser cerrada.
