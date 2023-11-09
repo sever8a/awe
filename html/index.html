@@ -378,29 +378,79 @@
         <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
     <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </code></pre></div>
-<h1 id="etiquetas-basicas">Etiquetas básicas</h1>
+<h1 id="etiquetas-basicas-la-estructura">Etiquetas básicas. La estructura</h1>
 <p>Un documento html debe comenzar siempre con las etiquetas <code>&lt;!DOCTYPE html&gt;</code></p>
-<p>De esta manera, en los primeros byte, se indica al navegador el tipo de documento que tiene que mostrar.</p>
-<h2 id="html">html</h2>
+<p>De esta manera, en los primeros byte, se indica al navegador (browser) el tipo de documento que tiene que mostrar.</p>
+<p>Las <strong>etiquetas</strong> se utilizan para marcar e inicio y fin de su efecto.</p>
+<p><div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+    texto o elementos entre las marcas
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</code></pre></div>
+A su vez las etiquetas pueden tener atributos, que sirven para matizar su efecto sobre el contenido.</p>
+<div class="highlight"><pre><span></span><code>    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;titular&quot;</span><span class="p">&gt;</span>
+        texto o elementos entre las marcas
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</code></pre></div>
+<h2 id="la-etiqueta-html">La etiqueta html</h2>
 <p>Define una página web. Siempre debe aparecer, para comenzar la página y finalizarla. Contiene todo el resto de etiquetas y texto de la página web. </p>
 <div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
     ...
 <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </code></pre></div>
-<h2 id="head">head</h2>
-<p>Zona de encabezado de la página. Son datos que no se muestran en la página web <em>excepto el título de la etiqueta</em>. Se utiliza para colocar las referencias a otros contenidos de la página web (scripts, fuentes externas, hojas de estilo...)</p>
-<h2 id="body">body</h2>
-<p>Elemento visual de la página web. Delimita del contenido <em>(texto, enlaces, imágenes...)</em> que forman la página web.</p>
-<h2 id="p">p</h2>
-<p>Delimitador de párrafo. El contenido queda marcado como un párrafo estableciendo un salto de línea al finalizar.</p>
+<p>Esta etiqueta contiene a otras dos.</p>
+<h3 id="head">head</h3>
+<p>Zona de encabezado de la página. </p>
+<p>No es visible directamente en el navegador. </p>
+<p>Algunos elementos se muestran: como el <em>título de la página</em>. </p>
+<p>En esta zona se colocan las referencias a otros contenidos de la página web (scripts, fuentes externas, hojas de estilo...). Estos contenidos pueden estar:</p>
+<ul>
+<li><strong>Directamente escritos</strong> en la zona de encabezado de la página.</li>
+<li><strong>Referenciados</strong> a otro documento que se carga cuando se visualiza la página.</li>
+</ul>
+<p>La primera opción, resulta más clara y fácil de seguir, cuando se quiere conocer qué elementos incorpora la página y cuándo son utilizados.</p>
+<div class="admonition info">
+<p class="admonition-title">Encabezado <strong>explícito</strong></p>
+<ul>
+<li>La página ocupa más tamaño.</li>
+<li>El contenido hay que actualizarlo en todas las páginas.</li>
+</ul>
+</div>
+<h3 id="body">body</h3>
+<p>Elemento visual de la página web. </p>
+<p>Todas las demás etiquetas visuales, se colocan dentro de esta.</p>
+<p>Delimita del contenido <em>(texto, enlaces, imágenes...)</em> que forman la página web.</p>
+<h2 id="estructuras-de-bloque">Estructuras de bloque</h2>
+<p>Delimitan bloques de texto, u otros elementos.</p>
+<p>La etiqueta más reconocible es el delimitador de párrafos <strong>p</strong></p>
+<h3 id="p">p</h3>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>
+    Este texto, forma un párrafo. Todo el texto aparece seguido sin saltos de línea.
+
+    Aunque al escribirlo añada separaciones.
+<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</code></pre></div>
+<p>El contenido queda marcado como un párrafo estableciendo un salto de línea al finalizar.</p>
 <div class="admonition info">
 <p class="admonition-title">saltos de línea</p>
 <p>En el código HTML los saltos de línea del editor no tienen efecto, <em>al igual que los espacios en blanco extra</em>. Para conseguir una organización del texto, hay que utilizar etiquetas de bloque<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup> u otras etiquetas únicas<sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup> especificas.</p>
 </div>
-<h2 id="div">div</h2>
-<p>Marca un bloque. Su efecto es similar a la anterior etiqueta. Se suele utilizar para definir bloquees en el maquetado de la página web. </p>
+<h3 id="div">div</h3>
+<p>Marca un bloque genérica. También tiene el efecto de salto de línea, pero puede contener todo tipo de etiquetas, <em>incluida su mismo tipo</em>.</p>
+<p>Su efecto es similar a la etiqueta de párrafo, pero en este caso se suele utilizar para definir bloquees en el maquetado de la página web. </p>
 <p>Por ejemplo, el bloque central y otro bloque en el lateral izquierdo.</p>
-<h2 id="span">span</h2>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;pagina&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;encabezado&quot;</span><span class="p">&gt;</span>
+        Menú de opciones
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;centro&quot;</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Documento de prueba.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;pie&quot;</span><span class="p">&gt;</span>
+        Datos de contacto
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</code></pre></div>
+<h3 id="span">span</h3>
 <p>Marca un bloque, integrado en otro de texto. Se utilia para distinguir elementos diferentes dentro de un bloque mayor.</p>
 <p>Por ejemplo, indicar texto en negrita dentro de un párrafo.</p>
 <div class="admonition question">
@@ -409,13 +459,14 @@
 <p>Por ejemplo, <code>menu</code> para definir una zona de menú, o <code>article</code> para indicar espacio para contenido textual.</p>
 <p>De esta forma se simplica su uso, sin necesidad de utilizar modificadores <strong>CSS</strong> para conseguir bloques específicos.</p>
 </div>
-<h2 id="encabezados">Encabezados</h2>
+<h2 id="encabezados-jerarquicos">Encabezados jerárquicos</h2>
 <p>Establece el nivel de encabezado de un título concreto. Se utiliza numeración baja para indicar los títulos de mayor tamaño.</p>
 <div class="highlight"><pre><span></span><code>    <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>tamaño grande<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>título de segundo nivel<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">h3</span><span class="p">&gt;</span>Título de tercer nivel<span class="p">&lt;/</span><span class="nt">h3</span><span class="p">&gt;</span>
 </code></pre></div>
-<h2 id="a">a</h2>
+<h2 id="enlaces">Enlaces</h2>
+<h3 id="la-etiqueta-a">La etiqueta a</h3>
 <p>Enlace a otras páginas web o referencias, se utiliza la <strong>url</strong> para indicar el destino.</p>
 <div class="highlight"><pre><span></span><code>    <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;https://www.otrolugarweb.com&quot;</span><span class="p">&gt;</span>Visita otro lugar de Internet<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
 
@@ -425,6 +476,21 @@
 <p class="admonition-title">Atributos</p>
 <p>El atributo <strong>target</strong> sirve para indicar dónde se visualizará el enlace: </p>
 <p><strong>_blank</strong> en la misma ventana del navegador, o en otra nueva.</p>
+</div>
+<h2 id="imagenes">Imágenes</h2>
+<h3 id="la-etiqueta-img">La etiqueta img</h3>
+<p><strong>img</strong> es una etiqueta única, no necesita ser cerrada.</p>
+<p>Toda los datos necesarios se indican mediante <strong>atributos</strong>:
+* <strong>src</strong>, indica la ruta origen de la imagen. Puede ser una ruta externa (indicando el domínio de otra web), o una ruta relativa a la organización de los ficheros de la propia página.</p>
+<ul>
+<li><strong>alt</strong>, texto alternativo que describe la imagen, se muestra si no es posible mostrar la imagen.</li>
+</ul>
+<p>Ejemplo:</p>
+<div class="highlight"><pre><span></span><code>    <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;carpeta_imagenes/miimagen.jpg&quot;</span> <span class="na">alt</span><span class="o">=</span><span class="s">&quot;un pingüino en mi ascensor&quot;</span><span class="p">&gt;</span>
+</code></pre></div>
+<div class="admonition question">
+<p class="admonition-title">Sintaxis</p>
+<p>Observa que los parámetros de los atributos deben ir entre comillas.</p>
 </div>
 <div class="footnote">
 <hr />
