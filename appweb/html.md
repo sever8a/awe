@@ -187,4 +187,20 @@ Enlace a otras páginas web o referencias, se utiliza la **url** para indicar el
 
 ### La etiqueta img
 
-**img** es una etiqueta única, no tiene que ser cerrada.
+**img** es una etiqueta única, no necesita ser cerrada.
+
+Toda los datos necesarios se indican mediante **atributos**:
+* **src**, indica la ruta origen de la imagen. Puede ser una ruta externa (indicando el domínio de otra web), o una ruta relativa a la organización de los ficheros de la propia página.
+
+* **alt**, texto alternativo que describe la imagen, se muestra si no es posible mostrar la imagen.
+
+Ejemplo:
+
+``` html
+    <img src="carpeta_imagenes/miimagen.jpg" alt="un pingüino en mi ascensor">
+```
+
+!!! question "Sintaxis"
+
+    Observa que los parámetros de los atributos deben ir entre comillas.
+
