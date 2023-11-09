@@ -1,3 +1,10 @@
+--- 
+title: HTML
+summary: Referencia a las principales etiquetas básicas de HTML
+authors: 
+    - Jose Robledano
+date: 2023-11-09
+---
 # HTML: Uno para controlarlos a todos
 
 **HTML5** es el último estándard de un lenguaje de marcas que permite mostrar contenido hipermedia en todos los navegadores. Un gran acuerdo entre todos los desarrolladores más importantes, que ha supuesto un cambio en la anterior tendencia competitiva para dominar el mercado.
@@ -68,9 +75,13 @@ Zona de encabezado de la página.
 
 No es visible directamente en el navegador. 
 
-Algunos elementos se muestran: como el *título de la página*. 
+!!! info "Algo se puede ver..."
 
-En esta zona se colocan las referencias a otros contenidos de la página web (scripts, fuentes externas, hojas de estilo...). Estos contenidos pueden estar:
+    Algunos elementos se muestran: como el *título de la página* o el icono *favicon*, que aparece en la pestaña. 
+
+Se indican los **metadatos** de la página web. Es decir, información adicional del documento sobre su autor, codificación, idioma ...
+
+También aparecen las referencias globales a otros elementos de la página web (scripts, fuentes externas, hojas de estilo...). Estos contenidos pueden estar:
 
 * **Directamente escritos** en la zona de encabezado de la página.
 * **Referenciados** a otro documento que se carga cuando se visualiza la página.
@@ -144,6 +155,14 @@ Marca un bloque, integrado en otro de texto. Se utilia para distinguir elementos
 
 Por ejemplo, indicar texto en negrita dentro de un párrafo.
 
+``` html
+<p>
+    Este texto, <span>forma un párrafo</span>. Todo el texto aparece seguido sin saltos de línea.
+
+    Aunque al escribirlo añada separaciones.
+</p>
+```
+
 !!! question "Etiquetas específicas para maquetado"
 
     Son etiquetas con función similar a las dos etiquetas anteriores, pero que se han definido de manera estándar para ocupar un espacio en el diseño.
@@ -176,6 +195,15 @@ Enlace a otras páginas web o referencias, se utiliza la **url** para indicar el
     <a href="pagina2.html">Visita mi página 2<a>
 ```
 
+Es necesario utilizar atributos para completar la etiqueta:
+
+* **href** url con la que quiere enlazar. 
+* **target** dónde se abrirá el enlace.Tiene varias opciones predeterminadas:
+    * *_blank* en una nueva ventana.
+    * *_self* en la misma ventana. Opción por defecto.
+    * *_top* abre la página en pantalla completa del navegador.
+    * *_parent* abre la página en iframe de la página, o la misma ventana si no hay iframe.
+
 !!! info "Atributos"
 
     El atributo **target** sirve para indicar dónde se visualizará el enlace: 
@@ -204,3 +232,56 @@ Ejemplo:
 
     Observa que los parámetros de los atributos deben ir entre comillas.
 
+
+## Listas
+
+Son enumeraciones de elementos.
+
+Hay tres tipos de listas: las numeradas, sin numerar y de definición (o diccionario).
+
+``` html
+<div>
+    <ul>
+        <li>Un elemento</li>
+        <li>Otro elemento</li>
+        <li>Úlitmo elemento</li>
+    </ul>
+</div>
+```
+!!! info "Atributo específico"
+
+    Las listas desordenadas pueden utilizar el atributo **type** con las siguientes opciones:
+    
+    * **disc** muestra un círculo o punto.
+    * **square** muestra un cuadrado.
+    * **circle** muestra un círculo sin rellenar.
+
+
+``` html
+<p>
+    Ejemplo de lista numerada.
+    <ol>
+        <li>primera opción</li>
+        <li>segunda opción</li>
+        <li>tercera opción</li>
+    </ol>
+</p>
+```
+!! info "Atributos listas ordenadas"
+
+    Hay unos atributos específicos para las listas ordenadas, que permiten modificar la presentación: **reversed**, **start**, **type**.
+
+
+Listas de definición.
+
+``` html
+<div>
+    <dl>
+        <dt>Atributo</dt>
+        <dd>Modificador del efecto de la etiqueta.</dd>
+        <dt>Etiqueta</dt>
+        <dd>Elemento que marca el inicio y fin de un efecto sobre los caracteres incluidos.</dd>
+
+    </dl>
+</div>
+```
