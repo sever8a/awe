@@ -401,8 +401,12 @@ A su vez las etiquetas pueden tener atributos, que sirven para matizar su efecto
 <h3 id="head">head</h3>
 <p>Zona de encabezado de la página. </p>
 <p>No es visible directamente en el navegador. </p>
-<p>Algunos elementos se muestran: como el <em>título de la página</em>. </p>
-<p>En esta zona se colocan las referencias a otros contenidos de la página web (scripts, fuentes externas, hojas de estilo...). Estos contenidos pueden estar:</p>
+<div class="admonition info">
+<p class="admonition-title">Algo se puede ver...</p>
+<p>Algunos elementos se muestran: como el <em>título de la página</em> o el icono <em>favicon</em>, que aparece en la pestaña. </p>
+</div>
+<p>Se indican los <strong>metadatos</strong> de la página web. Es decir, información adicional del documento sobre su autor, codificación, idioma ...</p>
+<p>También aparecen las referencias globales a otros elementos de la página web (scripts, fuentes externas, hojas de estilo...). Estos contenidos pueden estar:</p>
 <ul>
 <li><strong>Directamente escritos</strong> en la zona de encabezado de la página.</li>
 <li><strong>Referenciados</strong> a otro documento que se carga cuando se visualiza la página.</li>
@@ -453,6 +457,12 @@ A su vez las etiquetas pueden tener atributos, que sirven para matizar su efecto
 <h3 id="span">span</h3>
 <p>Marca un bloque, integrado en otro de texto. Se utilia para distinguir elementos diferentes dentro de un bloque mayor.</p>
 <p>Por ejemplo, indicar texto en negrita dentro de un párrafo.</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>
+    Este texto, <span class="p">&lt;</span><span class="nt">span</span><span class="p">&gt;</span>forma un párrafo<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>. Todo el texto aparece seguido sin saltos de línea.
+
+    Aunque al escribirlo añada separaciones.
+<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</code></pre></div>
 <div class="admonition question">
 <p class="admonition-title">Etiquetas específicas para maquetado</p>
 <p>Son etiquetas con función similar a las dos etiquetas anteriores, pero que se han definido de manera estándar para ocupar un espacio en el diseño.</p>
@@ -472,6 +482,17 @@ A su vez las etiquetas pueden tener atributos, que sirven para matizar su efecto
 
     <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;pagina2.html&quot;</span><span class="p">&gt;</span>Visita mi página 2<span class="p">&lt;</span><span class="nt">a</span><span class="p">&gt;</span>
 </code></pre></div>
+<p>Es necesario utilizar atributos para completar la etiqueta:</p>
+<ul>
+<li><strong>href</strong> url con la que quiere enlazar. </li>
+<li><strong>target</strong> dónde se abrirá el enlace.Tiene varias opciones predeterminadas:<ul>
+<li><em>_blank</em> en una nueva ventana.</li>
+<li><em>_self</em> en la misma ventana. Opción por defecto.</li>
+<li><em>_top</em> abre la página en pantalla completa del navegador.</li>
+<li><em>_parent</em> abre la página en iframe de la página, o la misma ventana si no hay iframe.</li>
+</ul>
+</li>
+</ul>
 <div class="admonition info">
 <p class="admonition-title">Atributos</p>
 <p>El atributo <strong>target</strong> sirve para indicar dónde se visualizará el enlace: </p>
@@ -492,6 +513,49 @@ A su vez las etiquetas pueden tener atributos, que sirven para matizar su efecto
 <p class="admonition-title">Sintaxis</p>
 <p>Observa que los parámetros de los atributos deben ir entre comillas.</p>
 </div>
+<h2 id="listas">Listas</h2>
+<p>Son enumeraciones de elementos.</p>
+<p>Hay tres tipos de listas: las numeradas, sin numerar y de definición (o diccionario).</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Un elemento<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Otro elemento<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Úlitmo elemento<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</code></pre></div>
+<div class="admonition info">
+<p class="admonition-title">Atributo específico</p>
+<p>Las listas desordenadas pueden utilizar el atributo <strong>type</strong> con las siguientes opciones:</p>
+<ul>
+<li><strong>disc</strong> muestra un círculo o punto.</li>
+<li><strong>square</strong> muestra un cuadrado.</li>
+<li><strong>circle</strong> muestra un círculo sin rellenar.</li>
+</ul>
+</div>
+<p><div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>
+    Ejemplo de lista numerada.
+    <span class="p">&lt;</span><span class="nt">ol</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>primera opción<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>segunda opción<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>tercera opción<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">ol</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+</code></pre></div>
+!! info "Atributos listas ordenadas"</p>
+<pre><code>Hay unos atributos específicos para las listas ordenadas, que permiten modificar la presentación: **reversed**, **start**, **type**.
+</code></pre>
+<p>Listas de definición.</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">dl</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">dt</span><span class="p">&gt;</span>Atributo<span class="p">&lt;/</span><span class="nt">dt</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">dd</span><span class="p">&gt;</span>Modificador del efecto de la etiqueta.<span class="p">&lt;/</span><span class="nt">dd</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">dt</span><span class="p">&gt;</span>Etiqueta<span class="p">&lt;/</span><span class="nt">dt</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">dd</span><span class="p">&gt;</span>Elemento que marca el inicio y fin de un efecto sobre los caracteres incluidos.<span class="p">&lt;/</span><span class="nt">dd</span><span class="p">&gt;</span>
+
+    <span class="p">&lt;/</span><span class="nt">dl</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</code></pre></div>
 <div class="footnote">
 <hr />
 <ol>
