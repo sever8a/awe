@@ -57,7 +57,7 @@ A su vez las etiquetas pueden tener atributos, que sirven para matizar su efecto
 ```
 
 
-## La etiqueta html
+## Una página un bloque. La etiqueta html. 
 
 Define una página web. Siempre debe aparecer, para comenzar la página y finalizarla. Contiene todo el resto de etiquetas y texto de la página web. 
 
@@ -69,38 +69,47 @@ Define una página web. Siempre debe aparecer, para comenzar la página y finali
 
 Esta etiqueta contiene a otras dos.
 
-### head
+## Primera informacion de la página. Etiqueta head. 
 
-Zona de encabezado de la página. 
-
-No es visible directamente en el navegador. 
+El contenido colocado entre el principio y final de esta etiqueta no es visible directamente en el navegador. Es un espacio donde se colocan los **metadatos**, necesarios para que los buscadores encuentren la página web. 
 
 !!! info "Algo se puede ver..."
 
     Algunos elementos se muestran: como el *título de la página* o el icono *favicon*, que aparece en la pestaña. 
 
-Se indican los **metadatos** de la página web. Es decir, información adicional del documento sobre su autor, codificación, idioma ...
+Algunos **metadatos** de la página web: información adicional del documento sobre su autor, codificación, idioma, keywords ...
 
-También aparecen las referencias globales a otros elementos de la página web (scripts, fuentes externas, hojas de estilo...). Estos contenidos pueden estar:
+También se colocan las referencias a otros elementos externos que se utilizan en la página web (scripts, fuentes externas, hojas de estilo...). Estos contenidos pueden estar:
 
 * **Directamente escritos** en la zona de encabezado de la página.
 * **Referenciados** a otro documento que se carga cuando se visualiza la página.
 
-La primera opción, resulta más clara y fácil de seguir, cuando se quiere conocer qué elementos incorpora la página y cuándo son utilizados.
+La primera opción, resulta más clara y fácil de seguir, cuando se quiere conocer qué elementos incorpora la página y cuándo son utilizados. 
+
+Pero referenciar a un documento externo permite separar la presentación del negocio y facilita la edición y adaptación de la página web.
 
 !!! info "Encabezado **explícito**"
 
-    *   La página ocupa más tamaño.
+    * La página ocupa más tamaño. Contiene más caracteres.
     * El contenido hay que actualizarlo en todas las páginas.
 
 
-### body
+## Todo lo visible. Etiqueta body
 
-Elemento visual de la página web. 
+Contiene toda la parte visual de la página web. 
 
 Todas las demás etiquetas visuales, se colocan dentro de esta.
 
-Delimita del contenido *(texto, enlaces, imágenes...)* que forman la página web.
+La esencia del hipertexto en las páginas web se basa en la utilización de texto que contiene enlaces a otros téxtos **los hiperenlaces**. 
+Estos junto al *texto, enlaces, imágenes y otros elementos multimedia* forman el contenido de la página web.
+
+``` html hl_lines="2 4"
+<html><head></head>
+<body>
+    Zona donde se coloca el resto de etiquetas visuales y texto plano.
+</body>
+</html>
+```
 
 ## Estructuras de bloque
 
@@ -285,3 +294,7 @@ Listas de definición.
     </dl>
 </div>
 ```
+
+## Referencias
+
+* [W3 Schools](https://www.w3schools.com/html/default.asp) Cursos guiados y gratuitos.
