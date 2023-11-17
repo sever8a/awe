@@ -391,38 +391,45 @@ A su vez las etiquetas pueden tener atributos, que sirven para matizar su efecto
         texto o elementos entre las marcas
     <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </code></pre></div>
-<h2 id="la-etiqueta-html">La etiqueta html</h2>
+<h2 id="una-pagina-un-bloque-la-etiqueta-html">Una página un bloque. La etiqueta html.</h2>
 <p>Define una página web. Siempre debe aparecer, para comenzar la página y finalizarla. Contiene todo el resto de etiquetas y texto de la página web. </p>
 <div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
     ...
 <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </code></pre></div>
 <p>Esta etiqueta contiene a otras dos.</p>
-<h3 id="head">head</h3>
-<p>Zona de encabezado de la página. </p>
-<p>No es visible directamente en el navegador. </p>
+<h2 id="primera-informacion-de-la-pagina-etiqueta-head">Primera informacion de la página. Etiqueta head.</h2>
+<p>El contenido colocado entre el principio y final de esta etiqueta no es visible directamente en el navegador. Es un espacio donde se colocan los <strong>metadatos</strong>, necesarios para que los buscadores encuentren la página web. </p>
 <div class="admonition info">
 <p class="admonition-title">Algo se puede ver...</p>
 <p>Algunos elementos se muestran: como el <em>título de la página</em> o el icono <em>favicon</em>, que aparece en la pestaña. </p>
 </div>
-<p>Se indican los <strong>metadatos</strong> de la página web. Es decir, información adicional del documento sobre su autor, codificación, idioma ...</p>
-<p>También aparecen las referencias globales a otros elementos de la página web (scripts, fuentes externas, hojas de estilo...). Estos contenidos pueden estar:</p>
+<p>Algunos <strong>metadatos</strong> de la página web: información adicional del documento sobre su autor, codificación, idioma, keywords ...</p>
+<p>También se colocan las referencias a otros elementos externos que se utilizan en la página web (scripts, fuentes externas, hojas de estilo...). Estos contenidos pueden estar:</p>
 <ul>
 <li><strong>Directamente escritos</strong> en la zona de encabezado de la página.</li>
 <li><strong>Referenciados</strong> a otro documento que se carga cuando se visualiza la página.</li>
 </ul>
-<p>La primera opción, resulta más clara y fácil de seguir, cuando se quiere conocer qué elementos incorpora la página y cuándo son utilizados.</p>
+<p>La primera opción, resulta más clara y fácil de seguir, cuando se quiere conocer qué elementos incorpora la página y cuándo son utilizados. </p>
+<p>Pero referenciar a un documento externo permite separar la presentación del negocio y facilita la edición y adaptación de la página web.</p>
 <div class="admonition info">
 <p class="admonition-title">Encabezado <strong>explícito</strong></p>
 <ul>
-<li>La página ocupa más tamaño.</li>
+<li>La página ocupa más tamaño. Contiene más caracteres.</li>
 <li>El contenido hay que actualizarlo en todas las páginas.</li>
 </ul>
 </div>
-<h3 id="body">body</h3>
-<p>Elemento visual de la página web. </p>
+<h2 id="todo-lo-visible-etiqueta-body">Todo lo visible. Etiqueta body</h2>
+<p>Contiene toda la parte visual de la página web. </p>
 <p>Todas las demás etiquetas visuales, se colocan dentro de esta.</p>
-<p>Delimita del contenido <em>(texto, enlaces, imágenes...)</em> que forman la página web.</p>
+<p>La esencia del hipertexto en las páginas web se basa en la utilización de texto que contiene enlaces a otros téxtos <strong>los hiperenlaces</strong>. 
+Estos junto al <em>texto, enlaces, imágenes y otros elementos multimedia</em> forman el contenido de la página web.</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;&lt;</span><span class="nt">head</span><span class="p">&gt;&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="hll"><span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+</span>    Zona donde se coloca el resto de etiquetas visuales y texto plano.
+<span class="hll"><span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+</span><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div>
 <h2 id="estructuras-de-bloque">Estructuras de bloque</h2>
 <p>Delimitan bloques de texto, u otros elementos.</p>
 <p>La etiqueta más reconocible es el delimitador de párrafos <strong>p</strong></p>
@@ -556,6 +563,10 @@ A su vez las etiquetas pueden tener atributos, que sirven para matizar su efecto
     <span class="p">&lt;/</span><span class="nt">dl</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </code></pre></div>
+<h2 id="referencias">Referencias</h2>
+<ul>
+<li><a href="https://www.w3schools.com/html/default.asp">W3 Schools</a> Cursos guiados y gratuitos.</li>
+</ul>
 <div class="footnote">
 <hr />
 <ol>
