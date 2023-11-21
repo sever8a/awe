@@ -339,6 +339,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#extensiones" class="md-nav__link">
+    Extensiones
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -465,6 +472,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#extensiones" class="md-nav__link">
+    Extensiones
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -495,28 +509,31 @@ CMS de propósito general que permite multiples configuraciones </p>
 <h2 id="historia">Historia</h2>
 <p>Joomla es un CMS libre, que llegó a ser lider en implantación de sitios web. Se convirtió en el referente para otros desarrollos posteriores que, de alguna manera lograron superarle.</p>
 <p>Surge como una aplicación web de propósito general, de manera que se puede utilizar para generar todo tipo de páginas web.</p>
-<p>Sin embargo, la cantidad de opciones y la organización, provocó un aumento de la complejidad de su uso. Finalmente otros CMS, más sencilos de configurar, fueron ocupando su lugar.</p>
+<p>Sin embargo, la cantidad de opciones y la cada vez más complicada configuración de estas, provocó un aumento de la complejidad de su uso. </p>
+<p>Finalmente otros CMS, más sencilos de configurar, fueron ocupando su lugar.</p>
 <p>Actualmente está en un proceso de regeneración.</p>
 <div class="admonition info">
 <p class="admonition-title">Su desarrollo actual</p>
 <p>Las últimas versiones son la <strong>4.4</strong> y <strong>5.0</strong></p>
 </div>
 <h2 id="instalacion">Instalación</h2>
-<p>Como otros CMS, necesita una base de datos para almacenzar los distintos objetos con los que generar la web. Pero en este caso no sirve cualquier base de datos. Es necesario que sea <strong>PostgreSQL</strong> o <strong>MySQL</strong>.</p>
-<p>Es necesario un <strong>servidor http</strong> que interprete <strong>lenguaje PHP</strong>.</p>
-<p>Otra posibilidad es utilizar un contenedor <em>Docker</em> para lanzar la aplicación, aunque será necesario comprender que con esta configuración es necesario el uso de dos contenedos:
+<p>Como otros CMS, también necesita una base de datos para almacenzar los distintos objetos con los que generar la web. En este caso no sirve cualquier base de datos, es necesario que sea <strong>PostgreSQL</strong> o <strong>MySQL</strong>.</p>
+<p>Es requisito un <strong>servidor http</strong> que interprete <strong>lenguaje PHP</strong>.</p>
+<p>Se pueden instalar los recursos necesarios en un servidor, u otra posibilidad es utilizar un contenedor <em>Docker</em> para lanzar la aplicación. En este caso es necesario comprender que con esta configuración se utilizan dos contenedos:
 - Uno para Joomla.
 - Otro para la base de datos.</p>
 <h2 id="creacion-de-contenido">Creación de contenido</h2>
-<p>Es necesario tener una visión previa de cómo queremos que sea el sitio web que diseñamos. </p>
-<p>De esta manera, una opción es elegir e instalar una plantilla que se ajuste a lo que necesitamos.</p>
+<p>¿Qué queremos conseguir?, ¿cómo será el sitio web que diseñamos? </p>
+<p>Teniendo claro el contenido y estructura que tendrá el sitio web; una opción es elegir e instalar una plantilla que se ajuste a lo que necesitamos.</p>
 <p>Cada plantilla contiene elementos diferentes, ya prediseñados, lo que facilita mucho cualquier desarrollo.</p>
 <div class="admonition question">
 <p class="admonition-title">Personalización</p>
-<p>También es posible realizar el diseño de estilo propipo, directamente utilizando <strong>HTML</strong> y <strong>CSS</strong>.</p>
+<p>También es posible realizar el diseño de estilo propio, directamente utilizando <strong>HTML</strong> y <strong>CSS</strong>.</p>
+<p>Ampliando las opciones de configuración de cualquier plantilla.</p>
 </div>
 <h3 id="articulos">Artículos</h3>
-<p>Son el <strong>contenido básico</strong>. Los artículos, pueden contener otros módulos con diferentes funcionalidades según la necesidad.</p>
+<p>Son el <strong>contenido básico</strong>. </p>
+<p>Los artículos, pueden contener, a su vez, otros módulos o complementos con diferentes funcionalidades según la necesidad.</p>
 <p>Se organizan en categorias y subcategorias. Esta estructura tiene que estar creada previamente.</p>
 <div class="admonition info">
 <p class="admonition-title">Categorías</p>
@@ -524,7 +541,18 @@ CMS de propósito general que permite multiples configuraciones </p>
 </div>
 <h3 id="menus">Menús</h3>
 <p>Los menús permiten acceder a diferentes artículos o componentes. </p>
-<p>Se deben ubicar en algún <strong>módulo</strong> de los que ofrece la plantilla de estilos utilizada. Mediante la opción <strong>Posición</strong>.</p>
+<p>Cada <strong>menú</strong> se compone de <strong>items</strong> que corresponden a las opciones del menú.</p>
+<ul>
+<li>Cada <strong>item</strong>, se vincula con un evento. Los eventos son acciones sobre el contenido del sitio web. Por ejemplo, mostrar la lista de categorías, mostrar un único artículo, mostrar contactos, ... </li>
+</ul>
+<p>El <strong>menú</strong> se deben ubicar en algún <strong>módulo</strong> de posición, de los que ofrece la plantilla de estilos utilizada. Utilizando la opción <strong>Posición</strong>.</p>
+<h3 id="extensiones">Extensiones</h3>
+<p>Hace referencia a cualquier tipo de elemeto añadido: pueden ser <em>plugin</em>, <em>complementos</em>, <em>módulos</em>, <em>plantillas</em>...</p>
+<p>Se instalan desde la pantalla de administardor, utilizando la opción <strong>Sistema</strong>. </p>
+<div class="admonition question">
+<p class="admonition-title">Activación de complementos</p>
+<p>Cuando se instala alguna nueva extensión, es necesario que sea activada para poder utilizarla en el sitio web.</p>
+</div>
 
 
   
