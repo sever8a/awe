@@ -23,21 +23,40 @@ En definitiva se basan en el trabajo colaborativo de usuarios voluntarios que pa
 
 ## Primeros pasos
 
-Para comenzar se basa en un artículo sobre un tema o un esquema de contenido guiando los puntos concretos que se quieren desarrollar.
+El sitio web tiene una estructura de **árbol jerárquico**, donde todo parte de una primera página **raiz**.
 
-Las palabras o frases clave, que definen otros conceptos se **marcan como enlaces**, en un principio son enlaces a páginas vacias, pero la **estratégia colaborativa** da la oportunidad de crear el contenido de esa nueva paǵina.
+Esta página se basa en un artículo sobre un tema, o puede ser un esquema de contenido guiando los apartados temáticos concretos que se quieren desarrollar en el sitio.
 
-A partir de esa página, otros usuarios podrán acceder a ese mismo enlace, y comprobar el contenido. Si consideran que precisa alguna modificación o corrección podrán realizarla, y de igual manera también pueden añadir más contenido nuevo.
+Las palabras o frases clave, que definen otros conceptos se **marcan como enlaces**, de manera que en cada artículo se encuentran referencias hacia otros. 
 
-Para editar los **artículos** se puede hacer con un usuario registrado o de manera anónima. En este último caso se hace pública la IP desde donde se realizó la edicion.
+Es el fundamento de los textos hiperenlazados.
+
+En un principio son enlaces a páginas vacias, pero la **estratégia colaborativa** da la oportunidad de crear el contenido de esa nueva paǵina.
+
+También siguiendo estos enlaces, es posible realizar la edicion de artículos. Completando su contenido o corrigiendo algunos datos o expresiones.
+
+!!! info "Edición y usuarios"
+    
+    Para editar los **artículos** se puede hacer con un usuario registrado o de manera anónima. 
+    
+    En este último caso es posible que se haga público algún dato de conexión, como la IP desde donde se realizó la edicion.
 
 Por supuesto, es posible borrar todo un artículo o aportar datos falsos, lo que puede generar noticias falsas (*fake news*), que pueden conducir a otros usuarios a malinterpretaciones y confusión.
 
-Estas acutaciones son calificadas coma **vandalismo** y son penalizadas banneando las IP o los usuarios.
+Estas actuaciones son calificadas coma **vandalismo** y son penalizadas banneando las IP o los usuarios.
 
 
-##
+!!! question "Utilidad pública"
+
+    Un sitio web de esta manera se puede utilizar a nivel interno de una organización para recopilar información sobre diferentes aspectos compartidos, generando un know-how de empresa.
 
 
+
+## Instalación
+
+Hay muchas versiones y variaciones de aplicaciones web con esta estructura. 
+
+* MediaWiki, originaria de WikiPedia.
+* Dokuwiki, ligera y sin necesidad de base de datos.
 
 Comienza tu propia wikipedia, eligiendo tu temática favorita.
