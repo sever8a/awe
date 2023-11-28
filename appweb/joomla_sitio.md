@@ -154,7 +154,9 @@ Y elegimos en la sección de **Artículos**, **Mostrar un solo artículo**.
 
 ## Módulos
 
-Los módulos son elementos preconstruidos que incorporamos al sitio web. Por ejemplo, los menús. 
+Los módulos son elementos preconstruidos que incorporamos al sitio web. Todo elemento que se quiera visualizar debe estar en un módulo. Por ejemplo, la ventana para acceso *(login)*. 
+
+El módulo tiene la propiedad **posición** para indicar en qué zona de la plantilla utilizada se mostrará. También se puede configurar en qué páginas se mostrará, puede ser en todas o en algunas determinadas.
 
 También es posible añadir módulos específicos desde Internet.
 

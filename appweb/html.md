@@ -11,15 +11,31 @@ date: 2023-11-09
 
 !!! question "Confusion competitiva"
 
-    Cada creador de cada navegador *(Microsoft, Netescape, Google, Opera, ...)* generaba sus propias etiquetas para mostar algunos elementos.
+    Cada creador de cada navegador *(Microsoft, Netescape, Google, Opera, ...)* generaba sus propias etiquetas para mostar algunos elementos. Por ejemplo, para reproducir un sonido, cada navegador tenía su propia etiqueta.
 
-    Esto suponía para los desarrolladores de páginas web, tener que incluir diferentes versiones de fragmentos de código válido para cada uno de los navegadores.
+    Esto suponía que los desarrolladores de páginas web, tenían que incluir diferentes versiones de fragmentos de código válido para cada uno de los navegadores.
 
 Tutorial de referencia [para conocer el estandar HTML5](https://www.w3schools.com/html/).
 
 # Principios del lenguaje HTML
 
 Se trata de un conjunto de etiquetas, que se colocan formando bloques. Cada etiqueta tiene un valor semántico, que **establece** la función de ese elemento en el conjunto de la página web.
+
+Las etiquetas delimitan donde aplican su efecto. Para comenzar se utiliza la forma  **<etiqueta>** y para finalizar su efecto **</etiqueta>**.
+
+A su vez las etiquetas pueden anidarse incluyendo unas dentro del efecto de otras.
+
+También es importante cuidar que la primera etiqueta que se abra debe ser la última en cerrarse. Manteniendo esta regla se evitan los efectos cruzados.
+
+!!! question "HTML robusto"
+
+    El lenguaje de marcas HTML es robusto en el sentido que si se comete algún error en el código, siempre intenta mostrar lo posible.
+
+    Por ejemplo si olvidamos cerrar una etiqueta, el efecto se extenderá hasta final del documento.
+
+!!! info "Etiquetas y efecto"
+
+    Las **etiquetas** se utilizan para marcar el inicio y fin de su efecto.
 
 ``` html
     <html>
@@ -34,44 +50,57 @@ Se trata de un conjunto de etiquetas, que se colocan formando bloques. Cada etiq
     </html>
 
 ```
+A su vez las etiquetas pueden tener atributos, que sirven para matizar el efecto de la etiqueta sobre el contenido.
+
+``` html hl_lines="1"
+    <div class="titular">
+        texto o elementos entre las marcas
+    </div>
+```
+Por ejemplo, la etiqueta **```<a>```** para crear un enlace, necesita la información de la nueva dirección a la que va a redirigir la navegación. Esta información se pasa en el parámetro **href** *hiperreferencia*.
+
+``` html hl_lines="2"
+    ...
+    <a href="https://www.aprendehtml.com">
+    ---
+```
 
 # Etiquetas básicas. La estructura
 
 Un documento html debe comenzar siempre con las etiquetas `<!DOCTYPE html>`
 
-De esta manera, en los primeros byte, se indica al navegador (browser) el tipo de documento que tiene que mostrar.
+De esta manera, en los primeros byte de una página web, se indica al navegador (browser) el tipo de documento que tiene que mostrar.
 
-Las **etiquetas** se utilizan para marcar e inicio y fin de su efecto.
+Tiene una estructura jerárquica o de árbol, donde una etiqueta actúa como nodo raiz, y el resto están contenidas en estas.
+
+
 
 ``` html
 <div>
     texto o elementos entre las marcas
 </div>
 ```
-A su vez las etiquetas pueden tener atributos, que sirven para matizar su efecto sobre el contenido.
-
-``` html
-    <div class="titular">
-        texto o elementos entre las marcas
-    </div>
-```
-
 
 ## Una página un bloque. La etiqueta html. 
 
-Define una página web. Siempre debe aparecer, para comenzar la página y finalizarla. Contiene todo el resto de etiquetas y texto de la página web. 
+Define una página web. Siempre debe aparecer, para comenzar la página y finalizarla. Contiene todo el resto de etiquetas y texto de la página web. Es la **etiqueta raiz** de la estructura de la página web.
 
 ``` html
 <html>
-    ...
+    <title>
+        ---
+    </title>
+    <body>
+        ---
+    </body>
 </html>
 ```
 
-Esta etiqueta contiene a otras dos.
+Esta etiqueta siempre contiene a otras dos.
 
 ## Primera informacion de la página. Etiqueta head. 
 
-El contenido colocado entre el principio y final de esta etiqueta no es visible directamente en el navegador. Es un espacio donde se colocan los **metadatos**, necesarios para que los buscadores encuentren la página web. 
+El contenido colocado en esta etiqueta no es visible directamente en el navegador. Es un espacio donde se colocan los **metadatos**, necesarios para que los buscadores encuentren la página web. 
 
 !!! info "Algo se puede ver..."
 
@@ -79,10 +108,10 @@ El contenido colocado entre el principio y final de esta etiqueta no es visible 
 
 Algunos **metadatos** de la página web: información adicional del documento sobre su autor, codificación, idioma, keywords ...
 
-También se colocan las referencias a otros elementos externos que se utilizan en la página web (scripts, fuentes externas, hojas de estilo...). Estos contenidos pueden estar:
+También se colocan las referencias a **otros elementos externos o internos** que se utilizan en la página web (scripts, fuentes externas, hojas de estilo...). Estos contenidos pueden estar:
 
-* **Directamente escritos** en la zona de encabezado de la página.
-* **Referenciados** a otro documento que se carga cuando se visualiza la página.
+* **Internos** aparecen escritos directamente en la zona de encabezado de la página.
+* **Externos** referencias a otro documento que se carga cuando se visualiza la página.
 
 La primera opción, resulta más clara y fácil de seguir, cuando se quiere conocer qué elementos incorpora la página y cuándo son utilizados. 
 
@@ -111,6 +140,12 @@ Estos junto al *texto, enlaces, imágenes y otros elementos multimedia* forman e
 </html>
 ```
 
+!!! info "Etiquetas de estructura"
+
+    Las etiquetas de estructura **html**, **head** y **body** solo pueden aparecer una vez en la página web.
+
+
+
 ## Estructuras de bloque
 
 Delimitan bloques de texto, u otros elementos.
@@ -138,7 +173,7 @@ El contenido queda marcado como un párrafo estableciendo un salto de línea al 
 
 ### div
 
-Marca un bloque genérica. También tiene el efecto de salto de línea, pero puede contener todo tipo de etiquetas, *incluida su mismo tipo*.
+Marca un bloque genérico. También tiene el efecto de salto de línea, pero puede contener todo tipo de etiquetas, *incluida su mismo tipo*.
 
 Su efecto es similar a la etiqueta de párrafo, pero en este caso se suele utilizar para definir bloquees en el maquetado de la página web. 
 
@@ -192,11 +227,9 @@ Establece el nivel de encabezado de un título concreto. Se utiliza numeración 
     <h3>Título de tercer nivel</h3>
 ```
 
-## Enlaces
+## Enlaces. La etiqueta a
 
-### La etiqueta a
-
-Enlace a otras páginas web o referencias, se utiliza la **url** para indicar el destino.
+Para enlazar con otras páginas web o referencias, se utiliza la **url** para indicar el destino.
 
 ``` html
     <a href="https://www.otrolugarweb.com">Visita otro lugar de Internet</a>
