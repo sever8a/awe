@@ -373,13 +373,25 @@
 <p><strong>HTML5</strong> es el último estándard de un lenguaje de marcas que permite mostrar contenido hipermedia en todos los navegadores. Un gran acuerdo entre todos los desarrolladores más importantes, que ha supuesto un cambio en la anterior tendencia competitiva para dominar el mercado.</p>
 <div class="admonition question">
 <p class="admonition-title">Confusion competitiva</p>
-<p>Cada creador de cada navegador <em>(Microsoft, Netescape, Google, Opera, ...)</em> generaba sus propias etiquetas para mostar algunos elementos.</p>
-<p>Esto suponía para los desarrolladores de páginas web, tener que incluir diferentes versiones de fragmentos de código válido para cada uno de los navegadores.</p>
+<p>Cada creador de cada navegador <em>(Microsoft, Netescape, Google, Opera, ...)</em> generaba sus propias etiquetas para mostar algunos elementos. Por ejemplo, para reproducir un sonido, cada navegador tenía su propia etiqueta.</p>
+<p>Esto suponía que los desarrolladores de páginas web, tenían que incluir diferentes versiones de fragmentos de código válido para cada uno de los navegadores.</p>
 </div>
 <p>Tutorial de referencia <a href="https://www.w3schools.com/html/">para conocer el estandar HTML5</a>.</p>
 <h1 id="principios-del-lenguaje-html">Principios del lenguaje HTML</h1>
 <p>Se trata de un conjunto de etiquetas, que se colocan formando bloques. Cada etiqueta tiene un valor semántico, que <strong>establece</strong> la función de ese elemento en el conjunto de la página web.</p>
-<div class="highlight"><pre><span></span><code>    <span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+<p>Las etiquetas delimitan donde aplican su efecto. Para comenzar se utiliza la forma  <strong><etiqueta></strong> y para finalizar su efecto <strong></etiqueta></strong>.</p>
+<p>A su vez las etiquetas pueden anidarse incluyendo unas dentro del efecto de otras.</p>
+<p>También es importante cuidar que la primera etiqueta que se abra debe ser la última en cerrarse. Manteniendo esta regla se evitan los efectos cruzados.</p>
+<div class="admonition question">
+<p class="admonition-title">HTML robusto</p>
+<p>El lenguaje de marcas HTML es robusto en el sentido que si se comete algún error en el código, siempre intenta mostrar lo posible.</p>
+<p>Por ejemplo si olvidamos cerrar una etiqueta, el efecto se extenderá hasta final del documento.</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Etiquetas y efecto</p>
+<p>Las <strong>etiquetas</strong> se utilizan para marcar el inicio y fin de su efecto.</p>
+</div>
+<p><div class="highlight"><pre><span></span><code>    <span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
         <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
             <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>
                 Saludo
@@ -390,37 +402,47 @@
         <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
     <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </code></pre></div>
+A su vez las etiquetas pueden tener atributos, que sirven para matizar el efecto de la etiqueta sobre el contenido.</p>
+<p><div class="highlight"><pre><span></span><code><span class="hll">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;titular&quot;</span><span class="p">&gt;</span>
+</span>        texto o elementos entre las marcas
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</code></pre></div>
+Por ejemplo, la etiqueta <strong><code>&lt;a&gt;</code></strong> para crear un enlace, necesita la información de la nueva dirección a la que va a redirigir la navegación. Esta información se pasa en el parámetro <strong>href</strong> <em>hiperreferencia</em>.</p>
+<div class="highlight"><pre><span></span><code>    ...
+<span class="hll">    <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;https://www.aprendehtml.com&quot;</span><span class="p">&gt;</span>
+</span>    ---
+</code></pre></div>
 <h1 id="etiquetas-basicas-la-estructura">Etiquetas básicas. La estructura</h1>
 <p>Un documento html debe comenzar siempre con las etiquetas <code>&lt;!DOCTYPE html&gt;</code></p>
-<p>De esta manera, en los primeros byte, se indica al navegador (browser) el tipo de documento que tiene que mostrar.</p>
-<p>Las <strong>etiquetas</strong> se utilizan para marcar e inicio y fin de su efecto.</p>
-<p><div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+<p>De esta manera, en los primeros byte de una página web, se indica al navegador (browser) el tipo de documento que tiene que mostrar.</p>
+<p>Tiene una estructura jerárquica o de árbol, donde una etiqueta actúa como nodo raiz, y el resto están contenidas en estas.</p>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
     texto o elementos entre las marcas
 <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </code></pre></div>
-A su vez las etiquetas pueden tener atributos, que sirven para matizar su efecto sobre el contenido.</p>
-<div class="highlight"><pre><span></span><code>    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;titular&quot;</span><span class="p">&gt;</span>
-        texto o elementos entre las marcas
-    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-</code></pre></div>
 <h2 id="una-pagina-un-bloque-la-etiqueta-html">Una página un bloque. La etiqueta html.</h2>
-<p>Define una página web. Siempre debe aparecer, para comenzar la página y finalizarla. Contiene todo el resto de etiquetas y texto de la página web. </p>
+<p>Define una página web. Siempre debe aparecer, para comenzar la página y finalizarla. Contiene todo el resto de etiquetas y texto de la página web. Es la <strong>etiqueta raiz</strong> de la estructura de la página web.</p>
 <div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
-    ...
+    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>
+        ---
+    <span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+        ---
+    <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </code></pre></div>
-<p>Esta etiqueta contiene a otras dos.</p>
+<p>Esta etiqueta siempre contiene a otras dos.</p>
 <h2 id="primera-informacion-de-la-pagina-etiqueta-head">Primera informacion de la página. Etiqueta head.</h2>
-<p>El contenido colocado entre el principio y final de esta etiqueta no es visible directamente en el navegador. Es un espacio donde se colocan los <strong>metadatos</strong>, necesarios para que los buscadores encuentren la página web. </p>
+<p>El contenido colocado en esta etiqueta no es visible directamente en el navegador. Es un espacio donde se colocan los <strong>metadatos</strong>, necesarios para que los buscadores encuentren la página web. </p>
 <div class="admonition info">
 <p class="admonition-title">Algo se puede ver...</p>
 <p>Algunos elementos se muestran: como el <em>título de la página</em> o el icono <em>favicon</em>, que aparece en la pestaña. </p>
 </div>
 <p>Algunos <strong>metadatos</strong> de la página web: información adicional del documento sobre su autor, codificación, idioma, keywords ...</p>
-<p>También se colocan las referencias a otros elementos externos que se utilizan en la página web (scripts, fuentes externas, hojas de estilo...). Estos contenidos pueden estar:</p>
+<p>También se colocan las referencias a <strong>otros elementos externos o internos</strong> que se utilizan en la página web (scripts, fuentes externas, hojas de estilo...). Estos contenidos pueden estar:</p>
 <ul>
-<li><strong>Directamente escritos</strong> en la zona de encabezado de la página.</li>
-<li><strong>Referenciados</strong> a otro documento que se carga cuando se visualiza la página.</li>
+<li><strong>Internos</strong> aparecen escritos directamente en la zona de encabezado de la página.</li>
+<li><strong>Externos</strong> referencias a otro documento que se carga cuando se visualiza la página.</li>
 </ul>
 <p>La primera opción, resulta más clara y fácil de seguir, cuando se quiere conocer qué elementos incorpora la página y cuándo son utilizados. </p>
 <p>Pero referenciar a un documento externo permite separar la presentación del negocio y facilita la edición y adaptación de la página web.</p>
@@ -442,6 +464,10 @@ Estos junto al <em>texto, enlaces, imágenes y otros elementos multimedia</em> f
 <span class="hll"><span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
 </span><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </code></pre></div>
+<div class="admonition info">
+<p class="admonition-title">Etiquetas de estructura</p>
+<p>Las etiquetas de estructura <strong>html</strong>, <strong>head</strong> y <strong>body</strong> solo pueden aparecer una vez en la página web.</p>
+</div>
 <h2 id="estructuras-de-bloque">Estructuras de bloque</h2>
 <p>Delimitan bloques de texto, u otros elementos.</p>
 <p>La etiqueta más reconocible es el delimitador de párrafos <strong>p</strong></p>
@@ -458,7 +484,7 @@ Estos junto al <em>texto, enlaces, imágenes y otros elementos multimedia</em> f
 <p>En el código HTML los saltos de línea del editor no tienen efecto, <em>al igual que los espacios en blanco extra</em>. Para conseguir una organización del texto, hay que utilizar etiquetas de bloque<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup> u otras etiquetas únicas<sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup> especificas.</p>
 </div>
 <h3 id="div">div</h3>
-<p>Marca un bloque genérica. También tiene el efecto de salto de línea, pero puede contener todo tipo de etiquetas, <em>incluida su mismo tipo</em>.</p>
+<p>Marca un bloque genérico. También tiene el efecto de salto de línea, pero puede contener todo tipo de etiquetas, <em>incluida su mismo tipo</em>.</p>
 <p>Su efecto es similar a la etiqueta de párrafo, pero en este caso se suele utilizar para definir bloquees en el maquetado de la página web. </p>
 <p>Por ejemplo, el bloque central y otro bloque en el lateral izquierdo.</p>
 <div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;pagina&quot;</span><span class="p">&gt;</span>
@@ -494,9 +520,8 @@ Estos junto al <em>texto, enlaces, imágenes y otros elementos multimedia</em> f
     <span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>título de segundo nivel<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">h3</span><span class="p">&gt;</span>Título de tercer nivel<span class="p">&lt;/</span><span class="nt">h3</span><span class="p">&gt;</span>
 </code></pre></div>
-<h2 id="enlaces">Enlaces</h2>
-<h3 id="la-etiqueta-a">La etiqueta a</h3>
-<p>Enlace a otras páginas web o referencias, se utiliza la <strong>url</strong> para indicar el destino.</p>
+<h2 id="enlaces-la-etiqueta-a">Enlaces. La etiqueta a</h2>
+<p>Para enlazar con otras páginas web o referencias, se utiliza la <strong>url</strong> para indicar el destino.</p>
 <div class="highlight"><pre><span></span><code>    <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;https://www.otrolugarweb.com&quot;</span><span class="p">&gt;</span>Visita otro lugar de Internet<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
 
     <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;pagina2.html&quot;</span><span class="p">&gt;</span>Visita mi página 2<span class="p">&lt;</span><span class="nt">a</span><span class="p">&gt;</span>
