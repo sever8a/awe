@@ -7,12 +7,15 @@ docs_dir: appweb
 
 
 nav: 
-    - "Las aplicaciones web": "index.md"
+    - "Las aplicaciones web":
+        - "index.md"
+        - "Reto - 1: Aplicaciones Web": "reto1.md"
     - "MediaWiki": "mediawiki.md"
     - "WordPress": "wordpress.md"
     - "Joomla": 
         - "joomla.md"
         - "Montar un sitio": "joomla_sitio.md"
+    - "Moodle": "moodle.md"
     - "HTML": "html.md"
     - "CSS": "css.md"
     
