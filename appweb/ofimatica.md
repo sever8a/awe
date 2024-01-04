@@ -32,3 +32,14 @@ Estas características han potenciado su crecimiento, junto con el logro de equi
 # Office 365
 
 Una plataforma en la nube desde la que realizar algunas tareas relacionadas con las aplicaciones web.
+
+Busca aprovechar las ventajas de las herramientas ofimáticas web, principalmente la posibilidad del trabajo colaborativo.
+
+Para ello, facilita la instalación en local de la aplicación de escritorio, que proporciona funcionalidades completas, y establece una sincronización de almacenamiento con el documento creado en la nube.
+
+!!! info "Limitaciones por sistema operativo"
+
+    La posibilidad de la instalación de aplicaciones de escritorio está limitada a las características del sistema operativo.
+
+    En el caso de Office 365 solo es posible realizar esta opción con los sistemas operativos Windows y MacOS, que son los que tienen desarrolladas las aplicaciones de escritorio.
+

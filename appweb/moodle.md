@@ -94,8 +94,12 @@ El formato del fichero CSV, requiere como mínimo, las columnas:
 !!! question "Formato CSV"
 
     El formato **CSV** se basa en un fichero de texto separando los datos con comas.
+    
+    Los datos correspondientes a un mismo elemento se escriben en la misma línea (*sin salto de línea*), separados por el caracter establecido como separador.
 
-    Es importante establecer el **caracter separador** que puede ser otros como el *punto y como*.
+    Es importante establecer el **caracter separador** que puede ser: el *punto y coma*, la *coma*, el *tabulador*, o también es posible establecer un tamaño fijo para cada dato.
+
+    Hay que tener presente que en los formatos numéricos, según la configuración regional o del lenguaje de programación utilizado, es posible que la interpretación de la parte decimal y el separador de miles puede generar confusión.
 
 El usuario con el rol de **Administrador** puede establecer roles del sistema a otros usuarios. Los roles del sistema son el **Administrador** y el **Gestor**.
 
@@ -107,6 +111,8 @@ El usuario con el rol de **Administrador** puede establecer roles del sistema a 
 ### Categorías
 
 Es posible establecer una estructura de categorías y subcategorías, para organizar los cursos y facilitar la distribución de estos.
+
+
 
 
 
