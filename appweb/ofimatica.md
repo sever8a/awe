@@ -1,3 +1,11 @@
+--- 
+title: Ofimatica Web
+summary: Referencia a las principales aplicaciones de ofimatica web
+authors: 
+    - Jose Robledano
+date: 2024-01-12
+---
+
 # Aplicaciones Ofimáticas utilizando tecnologías Web
 
 Con la irrupción de la nube (*cloud*), ciertas funcionalidades de las aplicaciones ofimáticas se ha potenciado con mucha facilidad, entre ellas el trabajo cooperativo.

@@ -21,6 +21,8 @@ Tutorial de referencia [para conocer el estandar HTML5](https://www.w3schools.co
 
 Se trata de un conjunto de etiquetas, que se colocan formando bloques. Cada etiqueta tiene un valor semántico, que **establece** la función de ese elemento en el conjunto de la página web.
 
+Un **bloque** comienza con una etiqueta y se cierra donde vuelve a aparecer la misma etiqueta precedida de **/**. Entre medio puede haber cualquier cantidad y tipo de carácteres.
+
 Las etiquetas delimitan donde aplican su efecto. Para comenzar se utiliza la forma  **<etiqueta>** y para finalizar su efecto **</etiqueta>**.
 
 A su vez las etiquetas pueden anidarse incluyendo unas dentro del efecto de otras.
@@ -81,11 +83,11 @@ Tiene una estructura jerárquica o de árbol, donde una etiqueta actúa como nod
 </div>
 ```
 
-## Una página un bloque. La etiqueta html. 
+## Una página un bloque. La etiqueta **html** 
 
 Define una página web. Siempre debe aparecer, para comenzar la página y finalizarla. Contiene todo el resto de etiquetas y texto de la página web. Es la **etiqueta raiz** de la estructura de la página web.
 
-``` html
+``` html hl_lines="1 8"
 <html>
     <title>
         ---
@@ -98,7 +100,7 @@ Define una página web. Siempre debe aparecer, para comenzar la página y finali
 
 Esta etiqueta siempre contiene a otras dos.
 
-## Primera informacion de la página. Etiqueta head. 
+## Primera informacion de la página. Etiqueta **head**
 
 El contenido colocado en esta etiqueta no es visible directamente en el navegador. Es un espacio donde se colocan los **metadatos**, necesarios para que los buscadores encuentren la página web. 
 
@@ -123,7 +125,7 @@ Pero referenciar a un documento externo permite separar la presentación del neg
     * El contenido hay que actualizarlo en todas las páginas.
 
 
-## Todo lo visible. Etiqueta body
+## Todo lo visible. Etiqueta **body**
 
 Contiene toda la parte visual de la página web. 
 
@@ -152,9 +154,9 @@ Delimitan bloques de texto, u otros elementos.
 
 La etiqueta más reconocible es el delimitador de párrafos **p**
 
-### p
+### **p**
 
-``` html
+``` html hl_lines="1 5"
 <p>
     Este texto, forma un párrafo. Todo el texto aparece seguido sin saltos de línea.
 
@@ -171,15 +173,15 @@ El contenido queda marcado como un párrafo estableciendo un salto de línea al 
     [^1]: Las etiquetas de bloque tienen una etiqueta de inicio de bloque y otra de final de bloque.
     [^2]: Las etiquetas únicas, solo son una etiqueta de inicio, no tienen etiqueta de finalización. Aunque pueden contener atributos.
 
-### div
+### **div**
 
 Marca un bloque genérico. También tiene el efecto de salto de línea, pero puede contener todo tipo de etiquetas, *incluida su mismo tipo*.
 
-Su efecto es similar a la etiqueta de párrafo, pero en este caso se suele utilizar para definir bloquees en el maquetado de la página web. 
+Su efecto es similar a la etiqueta de párrafo, pero en este caso se suele utilizar para definir bloques o cajas en el maquetado de la página web. 
 
 Por ejemplo, el bloque central y otro bloque en el lateral izquierdo.
 
-``` html
+``` html hl_lines="2 4 5 7"
 <div class="pagina">
     <div class="encabezado">
         Menú de opciones
@@ -193,13 +195,13 @@ Por ejemplo, el bloque central y otro bloque en el lateral izquierdo.
 </div>
 ```
 
-### span
+### **span**
 
 Marca un bloque, integrado en otro de texto. Se utilia para distinguir elementos diferentes dentro de un bloque mayor.
 
 Por ejemplo, indicar texto en negrita dentro de un párrafo.
 
-``` html
+``` html hl_lines="2"
 <p>
     Este texto, <span>forma un párrafo</span>. Todo el texto aparece seguido sin saltos de línea.
 
@@ -217,7 +219,7 @@ Por ejemplo, indicar texto en negrita dentro de un párrafo.
 
 
 
-## Encabezados jerárquicos
+## Encabezados jerárquicos **h1**
 
 Establece el nivel de encabezado de un título concreto. Se utiliza numeración baja para indicar los títulos de mayor tamaño.
 
@@ -226,12 +228,13 @@ Establece el nivel de encabezado de un título concreto. Se utiliza numeración 
     <h2>título de segundo nivel</h2>
     <h3>Título de tercer nivel</h3>
 ```
+Los valores que acompañan a la letra h en la etiqueta, indican el tamaño del título. Un valor más alto, es un título de menos importancia.
 
-## Enlaces. La etiqueta a
+## Enlaces. La etiqueta **a**
 
 Para enlazar con otras páginas web o referencias, se utiliza la **url** para indicar el destino.
 
-``` html
+``` html hl_lines="1"
     <a href="https://www.otrolugarweb.com">Visita otro lugar de Internet</a>
 
     <a href="pagina2.html">Visita mi página 2<a>
@@ -253,11 +256,9 @@ Es necesario utilizar atributos para completar la etiqueta:
     **_blank** en la misma ventana del navegador, o en otra nueva.
 
 
-## Imágenes
+## Imágenes. La etiqueta **img**
 
-### La etiqueta img
-
-**img** es una etiqueta única, no necesita ser cerrada.
+**img** es una etiqueta única, que no necesita ser cerrada.
 
 Toda los datos necesarios se indican mediante **atributos**:
 * **src**, indica la ruta origen de la imagen. Puede ser una ruta externa (indicando el domínio de otra web), o una ruta relativa a la organización de los ficheros de la propia página.
@@ -266,7 +267,7 @@ Toda los datos necesarios se indican mediante **atributos**:
 
 Ejemplo:
 
-``` html
+``` html hl_lines="1"
     <img src="carpeta_imagenes/miimagen.jpg" alt="un pingüino en mi ascensor">
 ```
 
@@ -279,14 +280,17 @@ Ejemplo:
 
 Son enumeraciones de elementos.
 
-Hay tres tipos de listas: las numeradas, sin numerar y de definición (o diccionario).
+Hay tres tipos de listas: 
+- Numeradas.
+- Sin numerar
+- De definición (o diccionario).
 
-``` html
+``` html hl_lines="2 6"
 <div>
     <ul>
         <li>Un elemento</li>
         <li>Otro elemento</li>
-        <li>Úlitmo elemento</li>
+        <li>Último elemento</li>
     </ul>
 </div>
 ```
@@ -299,7 +303,7 @@ Hay tres tipos de listas: las numeradas, sin numerar y de definición (o diccion
     * **circle** muestra un círculo sin rellenar.
 
 
-``` html
+``` html hl_lines="3 7"
 <p>
     Ejemplo de lista numerada.
     <ol>
@@ -309,14 +313,14 @@ Hay tres tipos de listas: las numeradas, sin numerar y de definición (o diccion
     </ol>
 </p>
 ```
-!! info "Atributos listas ordenadas"
+!!! info "Atributos listas ordenadas"
 
     Hay unos atributos específicos para las listas ordenadas, que permiten modificar la presentación: **reversed**, **start**, **type**.
 
 
 Listas de definición.
 
-``` html
+``` html hl_lines="2 8"
 <div>
     <dl>
         <dt>Atributo</dt>
@@ -328,6 +332,6 @@ Listas de definición.
 </div>
 ```
 
-## Referencias
+## Referencias documentales
 
 * [W3 Schools](https://www.w3schools.com/html/default.asp) Cursos guiados y gratuitos.
