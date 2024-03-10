@@ -459,7 +459,7 @@
 <p>En este ejemplo se ilustra con una máquina virtual utilizando el sistema operativo Linux Amazon 2023 (de la capa gratuita), con las opciones por defecto de procesamiento y computación. </p>
 <p>Como la idea es disponer de un servicio http al que sea posible acceder de manera remota, es aconsejable crear un Registro de Seguridad estableciendo que sea posible el acceso desde cualquier IP a la máquina.</p>
 <p>Otra cuestión importante es la IP de instalación en el servidor. </p>
-<p>Por defecto, AWS asigna una dirección IP pública dinámica (gratuita), pero al realiar la instalación de WordPress se almacena la dirección utilizada para referenciar las páginas y hojas de estilo utilizadas. </p>
+<p>Por defecto, AWS asigna una dirección IP pública dinámica (gratuita), pero al realizar la instalación de WordPress, esta se almacena para referenciar las páginas y hojas de estilo utilizadas. </p>
 <p>Esto es un problema cuando la IP pública cambia, algunos recursos de la aplicación web dejan de estar disponibles.</p>
 <h2 id="accede-al-servicio-ec2">Accede al servicio EC2.</h2>
 <p>Antes de comenzar con la instancia.
@@ -478,7 +478,7 @@ Como el objetivo es montar un servicio WordPress, es necesario habilitar el acce
 <h2 id="direccion-ip-fija">Dirección IP fija</h2>
 <p>Hay que tener en cuenta que AWS asigna una dirección IP pública dinámica cada vez que iniciamos la instancia. Esta situación no funciona bien con WordPress, ya que al volver la ejecución de la instancia tendrá una IP diferente a la utilizada en la configuración. </p>
 <p>Esto genera que no funciona bien la resolución de las paǵinas web de WordPress, dando problemas en el acceso a las páginas y a los estilos. </p>
-<p>La solución es disponer de una dirección IP fija. En AWS se llaman Elastic IP. </p>
+<p>La solución es disponer de una dirección IP fija. En AWS se llaman <strong>Elastic IP</strong>. </p>
 <p>La instalación puede verse perjudicada, si cambia la dirección IP pública de configuración. La solución más sencilla es conseguir una dirección IP Elástica (así las llama AWS cuando son IP fijas).  </p>
 <p>En el menú lateral localiza la opción IP elástica. Crea una nueva dirección IP y asignala a la instancia de la máquina virtual. </p>
 <p>De esta forma siempre que se ponga en marcha la máquina será la misma dirección IP pública.</p>
@@ -501,7 +501,7 @@ Como el objetivo es montar un servicio WordPress, es necesario habilitar el acce
 <p>4- Agregar al usuario ec2-user al grupo docker </p>
 <div class="highlight"><pre><span></span><code>    sudo usermod -a -G docker ec2-user 
 </code></pre></div>
-<p>Importante!! Hay que cerrar sesión con el usuario ec2-user (exit) y volver a conectar para que el usuario actualice los permisos, que se han cambiado. </p>
+<p>Importante!! Hay que cerrar sesión con el usuario ec2-user (exit) y volver a conectar para que el usuario actualice los permisos, que se han cambiado. Si no, no podrá ejecutar <strong>docker</strong> sin ser administrador.</p>
 <p>5- Para que docker comience cada vez que se inicie la máquina </p>
 <div class="highlight"><pre><span></span><code>    sudo chkconfig docker on 
 </code></pre></div>
