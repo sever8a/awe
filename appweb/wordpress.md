@@ -79,7 +79,7 @@ Hay que tener en cuenta que AWS asigna una dirección IP pública dinámica cada
 
 Esto genera que no funciona bien la resolución de las paǵinas web de WordPress, dando problemas en el acceso a las páginas y a los estilos. 
 
-La solución es disponer de una dirección IP fija. En AWS se llaman Elastic IP. 
+La solución es disponer de una dirección IP fija. En AWS se llaman **Elastic IP**. 
 
 La instalación puede verse perjudicada, si cambia la dirección IP pública de configuración. La solución más sencilla es conseguir una dirección IP Elástica (así las llama AWS cuando son IP fijas).  
 
@@ -122,7 +122,7 @@ De esta forma siempre que se ponga en marcha la máquina será la misma direcci�
     sudo usermod -a -G docker ec2-user 
 ```
 
-Importante!! Hay que cerrar sesión con el usuario ec2-user (exit) y volver a conectar para que el usuario actualice los permisos, que se han cambiado. 
+Importante!! Hay que cerrar sesión con el usuario ec2-user (exit) y volver a conectar para que el usuario actualice los permisos, que se han cambiado. Si no, no podrá ejecutar **docker** sin ser administrador.
 
 5- Para que docker comience cada vez que se inicie la máquina 
 
