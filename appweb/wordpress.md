@@ -41,7 +41,7 @@ Como la idea es disponer de un servicio http al que sea posible acceder de maner
 
 Otra cuestión importante es la IP de instalación en el servidor. 
 
-Por defecto, AWS asigna una dirección IP pública dinámica (gratuita), pero al realiar la instalación de WordPress se almacena la dirección utilizada para referenciar las páginas y hojas de estilo utilizadas. 
+Por defecto, AWS asigna una dirección IP pública dinámica (gratuita), pero al realizar la instalación de WordPress, esta se almacena para referenciar las páginas y hojas de estilo utilizadas. 
 
 Esto es un problema cuando la IP pública cambia, algunos recursos de la aplicación web dejan de estar disponibles.
 
